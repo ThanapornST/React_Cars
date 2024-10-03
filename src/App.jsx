@@ -69,15 +69,41 @@ const App = () => {
       <div className="title-left" style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}>Cars</div>
       
       <div className="form-container" style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-      <div className="input-container">
-          <Input
-            placeholder="Select Country"
-            value={searchCountry}
-            onChange={(e) => setSearchCountry(e.target.value)}
-            className="input"
-            style={{ width: '200px' }}
-          />
-        </div>
+      <Select
+          placeholder="Select Country"
+          value={searchCountry || undefined} 
+          onChange={(value) => setSearchCountry(value)}
+          className="input"
+          style={{ width: '300px', height: '50px' }} 
+          allowClear
+            >
+          <Option value="Italy">Italy</Option>
+          <Option value="UK">UK</Option>
+          <Option value="USA">USA</Option>
+          <Option value="Germany">Germany</Option>
+          <Option value="France">France</Option>
+          <Option value="China">China</Option>
+          <Option value="Romania">Romania</Option>
+          <Option value="South Korea">South Korea</Option>
+          <Option value="Netherlands">Netherlands</Option>
+          <Option value="Japan">Japan</Option>
+          <Option value="Russia">Russia</Option>
+          <Option value="Australia">Australia</Option>
+          <Option value="Sweden">Sweden</Option>
+          <Option value="Austria">Austria</Option>
+          <Option value="Switzerland">Switzerland</Option>
+          <Option value="Malaysia">Malaysia</Option>
+          <Option value="Spain">Spain</Option>
+          <Option value="Czech Republic">Czech Republic</Option>
+          <Option value="Taiwan">Taiwan</Option>
+          <Option value="India">India</Option>
+          <Option value="Serbia">Serbia</Option>
+          <Option  ption value="Ukraine">Ukraine</Option>
+          <Option value="Denmark">Denmark</Option>
+
+      </Select>
+
+
         <div className="input-container">
           <Input
             placeholder="Search Name"
